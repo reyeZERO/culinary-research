@@ -1,0 +1,66 @@
+#include <iostream>
+#include <vector>
+#include <stdexcept>
+#include <cassert>
+
+template <typename T>
+class Stack {
+private:
+    std::vector<T> data;
+public:
+    void push(const T& value) {
+        data.push_back(value);
+    }
+    T pop() {
+        if (data.empty()) {
+            throw std::runtime_error("Stack underflow");
+        }
+        T topElement = data.back();
+        data.pop_back();
+        return topElement;
+    }
+    T top() const {
+        if (data.empty()) {
+            throw std::runtime_error("Empty stack");
+        }
+        return data.back();
+    }
+    bool empty() const {
+        return data.empty();
+    }
+    size_t size() const {
+        return data.size();
+    }
+};
+
+int main() {
+    Stack<int> s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    assert(s.top() == 3);
+    assert(s.pop() == 3);
+    assert(s.pop() == 2);
+    assert(s.size() == 1);
+    assert(s.pop() == 1);
+    assert(s.empty());
+
+    Stack<std::string> t;
+    t.push("apple");
+    t.push("banana");
+    assert(t.top() == "banana");
+    assert(t.pop() == "banana");
+    assert(t.pop() == "apple");
+    assert(t.empty());
+
+    Stack<double> u;
+    u.push(1.1);
+    u.push(2.2);
+    assert(u.top() == 2.2);
+    assert(u.pop() == 2.2);
+    assert(u.pop() == 1.1);
+    assert(u.empty());
+
+    std::cout << "All tests passed\n";
+}
+

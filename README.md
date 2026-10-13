@@ -311,3 +311,92 @@ MIT — see [LICENSE](LICENSE)
 ## Acknowledgments
 
 This skill combines the methodology and source coverage from multiple approaches to culinary research, including federated cookbook search, provenance-based authenticity evaluation, and historical recipe reconstruction.
+
+
+## Monorepo Consolidation Layout
+
+This repository now acts as an **organizational monorepo copy** for `reyeZERO` repositories.
+
+- The existing `culinary-research` skill remains at the repository root and is unchanged as the primary project.
+- Imported repositories are grouped under `labs/` (coursework/exercises) and `projects/` (games, portfolio projects, and reusable/profile-oriented repos).
+- This is a consolidation copy only: **original source repositories remain separate and are not deleted**.
+- `lift-club` is intentionally excluded from this repository.
+
+### Top-level structure
+
+```text
+/
+├── README.md
+├── SKILL.md
+├── references/
+├── scripts/
+├── templates/
+├── labs/
+│   └── coursework/
+└── projects/
+    ├── games/
+    ├── portfolio/
+    └── profile/
+```
+
+### Repository mapping
+
+| Source repository | Destination in this monorepo | Status |
+|---|---|---|
+| `culinary-research` | `/ (repository root)` | existing root project (kept in place) |
+| `-Hi-Equals-hi-` | `labs/coursework/-Hi-Equals-hi-` | imported |
+| `A-Terribly-Weighty-Subject` | `labs/coursework/A-Terribly-Weighty-Subject` | imported |
+| `After-a-String-Argument-I-End-Up-in-Knots` | `labs/coursework/After-a-String-Argument-I-End-Up-in-Knots` | imported |
+| `And-Nothing-But-The-Truth-Lab` | `labs/coursework/And-Nothing-But-The-Truth-Lab` | imported |
+| `Battle-Boats` | `projects/games/Battle-Boats` | imported |
+| `Campaign-Tic-Tac-Toe` | `projects/games/Campaign-Tic-Tac-Toe` | imported |
+| `Collatz-Conjecture-In-Class-Activity` | `labs/coursework/Collatz-Conjecture-In-Class-Activity` | imported |
+| `Comparison-Overloading-In-Class-Activity` | `labs/coursework/Comparison-Overloading-In-Class-Activity` | imported |
+| `Complex-Number` | `labs/coursework/Complex-Number` | imported |
+| `Egg-ceptional` | `labs/coursework/Egg-ceptional` | imported |
+| `Extending-Data-Structures-Lab-Assignment-Instructions` | `labs/coursework/Extending-Data-Structures-Lab-Assignment-Instructions` | imported |
+| `Fibonacci-Sequence-In-Class-Activity` | `labs/coursework/Fibonacci-Sequence-In-Class-Activity` | imported |
+| `File-Away-Those-Details-Lab` | `labs/coursework/File-Away-Those-Details-Lab` | imported |
+| `Fold` | `labs/coursework/Fold` | imported |
+| `For-the-Nth-Time` | `labs/coursework/For-the-Nth-Time` | imported |
+| `From-here-to-here` | `labs/coursework/From-here-to-here` | imported |
+| `Github-Practice` | `labs/coursework/Github-Practice` | imported |
+| `Happy-Birthday-Activiy` | `labs/coursework/Happy-Birthday-Activiy` | imported |
+| `Hello-World-lab` | `labs/coursework/Hello-World-lab` | imported |
+| `I-Get-the-Point-Lab` | `labs/coursework/I-Get-the-Point-Lab` | imported |
+| `is_palindrome` | `labs/coursework/is_palindrome` | imported |
+| `It-s-Raining-Strings-Lab` | `labs/coursework/It-s-Raining-Strings-Lab` | imported |
+| `Itty-Bitty-Kitties` | `projects/games/Itty-Bitty-Kitties` | imported |
+| `Meet-or-not-Meet` | `labs/coursework/Meet-or-not-Meet` | imported |
+| `Monograms` | `labs/coursework/Monograms` | imported |
+| `Now-Where-Did-I-Put-Lab` | `labs/coursework/Now-Where-Did-I-Put-Lab` | imported |
+| `Out-in-the-Middle-of-Space-Lab` | `labs/coursework/Out-in-the-Middle-of-Space-Lab` | imported |
+| `Out-of-bounds` | `labs/coursework/Out-of-bounds` | imported |
+| `Password-Validator` | `labs/coursework/Password-Validator` | imported |
+| `Payroll` | `labs/coursework/Payroll` | imported |
+| `Point-to-Point-Lab-` | `labs/coursework/Point-to-Point-Lab-` | imported |
+| `Pointer-Practice` | `labs/coursework/Pointer-Practice` | imported |
+| `Portafolio-1-Tiktacktow` | `projects/portfolio/Portafolio-1-Tiktacktow` | imported |
+| `Portafolio-3` | `projects/portfolio/Portafolio-3` | imported |
+| `Project-Kaban-The-Game` | `projects/games/Project-Kaban-The-Game` | imported |
+| `Resistors-Lab-` | `labs/coursework/Resistors-Lab-` | imported |
+| `Result-Tracking-Functor` | `labs/coursework/Result-Tracking-Functor` | imported |
+| `reyeZERO` | `projects/profile/reyeZERO` | profile placeholder created (source repo has no downloadable archive content) |
+| `Rock-Paper-Scisors` | `projects/games/Rock-Paper-Scisors` | imported |
+| `Rolling-Along-Lab` | `labs/coursework/Rolling-Along-Lab` | imported |
+| `Shape-Lab` | `labs/coursework/Shape-Lab` | imported |
+| `Snaking-Calculator-Lab` | `labs/coursework/Snaking-Calculator-Lab` | imported |
+| `Stack-Data-Structure` | `labs/coursework/Stack-Data-Structure` | imported |
+| `Student` | `labs/coursework/Student` | imported |
+| `Templating-Lab` | `labs/coursework/Templating-Lab` | imported |
+| `Tic-Tac-Toe-Portfolio-2` | `projects/portfolio/Tic-Tac-Toe-Portfolio-2` | imported |
+| `Times-Are-Changing` | `labs/coursework/Times-Are-Changing` | imported |
+| `Unique-corn-lab` | `labs/coursework/Unique-corn-lab` | imported |
+| `Until` | `labs/coursework/Until` | imported |
+| `Well-That-s-Just-Prime` | `labs/coursework/Well-That-s-Just-Prime` | imported |
+
+### Notes from import inspection
+
+- `lift-club` was excluded intentionally and remains outside this monorepo.
+- `reyeZERO/reyeZERO` was handled as an empty profile repository placeholder because no archive content was available to copy.
+- No Neovim configuration repositories were present in the retrieved `reyeZERO` repository list during this import pass, so no Neovim folders were added.
